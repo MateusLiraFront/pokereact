@@ -18,9 +18,7 @@ const SearchBar = () => {
         const result = await searchPokemon(pokemon)
         setPokemon(result)
     }
-    // const onClickHandler = () => {
-    //     onSearch(search)
-    // }
+    
     return(
        
         <div className="searchbar-container">
@@ -28,7 +26,7 @@ const SearchBar = () => {
                 <div className="searchbar campo row">
                     <div className="searchbar">
                         <input placeholder="Buscar Pokemon" onChange={onChangeHandler}></input>
-                        <h1>Pokemon: </h1>
+                        
                     </div>
                     <div className="search-btn">
                         <button onClick={onButtonClickHandler}> Buscar </button>
@@ -38,6 +36,7 @@ const SearchBar = () => {
            
             {pokemon ? (
                 <div>
+                    <h1>Pokemon: </h1>
                     <div> <strong> Nome: </strong> {pokemon.name}</div>
                     <img src={pokemon.sprites.front_default} alt={pokemon.name} />
                     <div> <strong> Peso: </strong>{pokemon.weight}</div>
@@ -55,7 +54,6 @@ const SearchBar = () => {
                                 </li>
                             ))}
                         </ul></div>
-                    
                 </div>
             ) : null}
            

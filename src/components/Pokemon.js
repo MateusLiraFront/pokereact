@@ -1,12 +1,11 @@
 import React from "react";
 
-const Pokemon = () => {
-
+const Pokemon = (props) => {
+    const {pokemon} = props
     return(
         <div>
-            <h1>
-                Pokemon
-            </h1>
+            {pokemon.name}
+            {/* <h1> Pokemon </h1> */}
         </div>
     )
 };
